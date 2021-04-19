@@ -8,7 +8,6 @@ import TabBarMenu from './components/tabBarMenu/TabBarMenu';
 import MetricSlider from './components/metricSlider/MetricSlider';
 import ForecastTab from "./pages/forecastTab/ForecastTab";
 import TodayTab from "./pages/todayTab/TodayTab";
-import kelvinToCelcius from "./helpers/kelvinToCelcius";
 import { TempContext } from "./context/TempProvider";
 
 const apiKey = '66ffa59445e9cf9a2b7ac7fbacbc349e';

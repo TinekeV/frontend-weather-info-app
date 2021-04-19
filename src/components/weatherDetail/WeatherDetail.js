@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import './WeatherDetail.css';
-import kelvinToCelcius from "../../helpers/kelvinToCelcius";
 import iconMapper from "../../helpers/iconMapper";
 import { TempContext } from "../../context/TempProvider";
 

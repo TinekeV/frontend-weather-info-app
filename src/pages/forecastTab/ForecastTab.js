@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from "axios";
 import './ForecastTab.css';
-import kelvinToCelcius from "../../helpers/kelvinToCelcius";
 import createDataString from "../../helpers/createDataString";
 import { TempContext } from "../../context/TempProvider";
 
