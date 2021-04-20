@@ -4,8 +4,6 @@ import './ForecastTab.css';
 import createDataString from "../../helpers/createDataString";
 import { TempContext } from "../../context/TempProvider";
 
-// const apiKey = '66ffa59445e9cf9a2b7ac7fbacbc349e';
-
 function ForecastTab({ coordinates }) {
   const [forecasts, setForecasts] = useState(null)
   const [error, setError] = useState(false)

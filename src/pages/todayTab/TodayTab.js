@@ -4,8 +4,6 @@ import './TodayTab.css';
 import WeatherDetail from "../../components/weatherDetail/WeatherDetail";
 import createTimeString from "../../helpers/createTimeString";
 
-// const apiKey = '66ffa59445e9cf9a2b7ac7fbacbc349e';
-
 function TodayTab({ coordinates }) {
 	const [forecasts, setForecasts] = useState(null)
 	const [error, setError] = useState(false)
