@@ -10,7 +10,7 @@ import ForecastTab from "./pages/forecastTab/ForecastTab";
 import TodayTab from "./pages/todayTab/TodayTab";
 import { TempContext } from "./context/TempProvider";
 
-const apiKey = '66ffa59445e9cf9a2b7ac7fbacbc349e';
+// const apiKey = '66ffa59445e9cf9a2b7ac7fbacbc349e';
 
 function App() {
   const [ weatherData, setWeatherData ] = useState(null);
@@ -26,7 +26,7 @@ function App() {
 
           try {
 
-            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location},nl&appid=${apiKey}&lang=nl`)
+            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location},nl&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
             setWeatherData(result.data)
             //console.log(result.data)
           } catch (e) {

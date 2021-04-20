@@ -4,7 +4,7 @@ import './TodayTab.css';
 import WeatherDetail from "../../components/weatherDetail/WeatherDetail";
 import createTimeString from "../../helpers/createTimeString";
 
-const apiKey = '66ffa59445e9cf9a2b7ac7fbacbc349e';
+// const apiKey = '66ffa59445e9cf9a2b7ac7fbacbc349e';
 
 function TodayTab({ coordinates }) {
 	const [forecasts, setForecasts] = useState(null)
@@ -18,7 +18,7 @@ function TodayTab({ coordinates }) {
 			toggleLoading(true)
 
 			try {
-				const result = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=minutely,current,daily&appid=${apiKey}`)
+				const result = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=minutely,current,daily&appid=${process.env.REACT_APP_API_KEY}`)
 				setForecasts([
 					result.data.hourly[3],
 					result.data.hourly[5],
